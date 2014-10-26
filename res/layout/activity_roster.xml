@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RosterActivity"
+	android:orientation="vertical" >
+	
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create New Roster"
+        style="?android:attr/listSeparatorTextViewStyle" />
+
+    <EditText
+        android:id="@+id/rosterNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Roster Name"
+        android:inputType="textCapSentences"
+        android:paddingBottom="5dp" />
+	
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/createRosterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Create Roster"
+        android:onClick="createRoster" />
+        
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="10dp" />
+	
+	<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Home Team Roster"
+        style="?android:attr/listSeparatorTextViewStyle" />
+	
+	<LinearLayout
+	    android:layout_width = "fill_parent"
+	    android:layout_height = "wrap_content"
+	    >
+	<Spinner 
+	    android:id="@+id/rosterSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight = "1"
+        />
+	
+	</LinearLayout>
+	<LinearLayout
+	    android:layout_width = "wrap_content"
+	    android:layout_height = "0dp"
+	    android:layout_gravity = "center_horizontal"
+	    android:layout_weight = "1"
+	    >
+	    
+	<Button
+	    android:id="@+id/deleteRoster"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity = "center_horizontal"
+	    android:onClick="deleteRoster"
+	    android:text="Delete Roster"
+	    />
+	
+	<Button
+	    android:id="@+id/editRoster"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:onClick="editRoster"
+	    android:text="View or Edit Roster"
+	    />
+	</LinearLayout>
+	
+	<EditText
+	    android:id="@+id/homeNameRosterActivity"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:ems="10"
+	    android:hint="Enter Home Team Name"
+	    android:inputType="textCapSentences" />
+	<EditText
+	    android:id="@+id/opponentNameRosterActivity"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:ems="10"
+	    android:hint="Enter Opponent Team Name"
+	    android:inputType="textCapSentences" />
+	
+	<Button
+        android:id="@+id/beginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity = "center_horizontal"
+        android:onClick = "startTracking"
+        android:text="Start Tracking" />
+</LinearLayout>

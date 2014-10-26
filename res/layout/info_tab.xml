@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id = "@+id/Info"
+    android:paddingTop="65dp" >
+    
+    <TextView
+        android:id="@+id/filePathTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="File currently not saved"
+        android:gravity="center"
+        android:layout_weight="1" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Folder or tournament name"
+        style="?android:attr/listSeparatorTextViewStyle" />
+	<LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <EditText
+	        android:id="@+id/newDirectoryText"
+	        android:layout_weight="1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:hint="New Folder or Tournament"
+	        android:inputType="textCapSentences"/>
+	    <Button 
+	        android:id="@+id/buttonNewDirectory"
+	        android:layout_width = "wrap_content"
+	        android:layout_height = "wrap_content"
+	        android:text="Add"
+	        android:onClick="addDirectoryInfoTab"/>
+        
+    </LinearLayout>
+    <Spinner
+        android:id="@+id/directorySpinnerInfoTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/spinner2_prompt" />
+    <View 
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="0.25"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="File name"
+        style="?android:attr/listSeparatorTextViewStyle" />
+
+    
+	
+   	<EditText
+         android:id="@+id/GameName"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:hint="Enter Game Name"
+         android:inputType="textCapSentences" />
+    
+	<Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create File and Save"
+        android:layout_gravity="center_horizontal"
+        android:onClick="createFileSaveData" />
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25" />
+</LinearLayout>

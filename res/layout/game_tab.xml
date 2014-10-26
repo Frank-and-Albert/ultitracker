@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id = "@+id/Game"
+    android:paddingTop="70dp" >
+    
+	<TextView 
+    	android:layout_width = "wrap_content"
+    	android:layout_height = "wrap_content"
+    	android:layout_gravity = "center_horizontal"
+    	android:text = "Game Score"
+    	android:textSize = "20sp"
+    	android:textStyle = "bold" />
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/HomeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Home" />
+
+            <NumberPicker
+                android:id="@+id/PickerHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/OpponentName" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:text="Opponent"
+                android:layout_gravity = "center_horizontal" />
+            
+            <NumberPicker
+                android:id="@+id/PickerOpponent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity = "center_horizontal"/>
+
+        </LinearLayout>
+        
+        
+
+    </LinearLayout>
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"/>
+    <Button
+		android:id="@+id/updateButtonGameTab"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Save"
+		android:onClick="updateData" />
+    
+</LinearLayout>

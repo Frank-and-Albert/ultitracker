@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/previewActivity_savedGamesButton"
+        android:showAsAction="ifRoom|withText"
+        android:title="Saved Games"/>
+    <item
+        android:id="@+id/previewActivity_editGameButton"
+        android:showAsAction="ifRoom|withText"
+        android:title="Edit Game"/>
+
+</menu>
